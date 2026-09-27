@@ -107,9 +107,16 @@
 
         // 5. Criação e estilização do painel flutuante
         var wd = document.createElement("div");
-        wd.id = "rsp"; // Identificador único para controle de instância
+        wd.id = "rsp";
         wd.style.cssText =
             "position:fixed;bottom:20px;right:20px;background:#333;color:#fff;padding:10px 15px;border-radius:8px;z-index:2147483647;font-family:sans-serif;font-size:14px;box-shadow:0 4px 12px rgba(0,0,0,0.4);display:flex;align-items:center;gap:10px;";
+
+        // Novo elemento para exibir a RegEx
+        var rx = document.createElement("span");
+        rx.textContent = "RegEx: " + p;
+        rx.title = p; // Tooltip com a expressão completa
+        rx.style.cssText =
+            "font-family:monospace;background:#111;color:#0f0;padding:4px 8px;border-radius:4px;max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;";
 
         var wc = document.createElement("span");
         wc.textContent = "1/" + h.length;
@@ -175,6 +182,7 @@
         };
 
         // 7. Inserção do painel no DOM e inicialização
+        wd.appendChild(rx); // Adiciona o display da RegEx
         wd.appendChild(wc);
         wd.appendChild(bp);
         wd.appendChild(bn);
