@@ -1,6 +1,6 @@
 # DESCRIÇÃO
 
-Este projeto é de um bookmarklet para procurar texto na página usando RegEx.
+Este projeto é de um bookmarklet para procurar texto na página usando RegEx. Em nova versão ele já captura o texto selecionado.
 
 # GERANDO
 
