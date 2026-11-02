@@ -11,7 +11,10 @@
     }
 
     // 1. Coleta de parâmetros do usuário
-    var p = prompt("Insira a expressão regular:");
+    let select = window.getSelection().toString();
+    let default_text = Boolean(select) ? select : "";
+
+    var p = prompt("Insira a expressão regular:", default_text);
     if (!p) return;
     var f = prompt("Insira as flags (ex: gi):", "gi");
     if (!f) return;
